@@ -3,7 +3,7 @@ const token = "token here";
 
 async function getCharacterByName(name) {
     let status; // API HTTP Status Code
-    fetch(`https://api.afterfall-game.com/v3/api/search/character/name/`+name, {
+    fetch(`https://api.playafterfall.com/v3/api/search/character/name/`+name, {
         headers: {
              'Content-Type': 'application/json',
              'Authorization': 'Bearer'+token,
@@ -23,7 +23,7 @@ async function getCharacterByName(name) {
                 const charDZ = json['dz_level'];
                 const charTitleId = json['title_id']; // For further requests.
                 let charTitle;
-                fetch(`https://api.afterfall-game.com/v3/api/title/`+ charTitleId, {
+                fetch(`https://api.playafterfall.com/v3/api/title/`+ charTitleId, {
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization': 'Bearer '+token,

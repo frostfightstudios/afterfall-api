@@ -1,9 +1,9 @@
 <?php
     $apiToken = '<token>';
     function getCharacterByName($name){
-        $response = request('https://api.afterfall-game.com/v3/api/search/character/name/'+$name);
+        $response = request('https://api.playafterfall.com/v3/api/search/character/name/'+$name);
         $responseArray = json_decode($response);
-        $title = request('https://api.afterfall-game.com/v3/api/title/'+$responseArray['title_id']);
+        $title = request('https://api.playafterfall.com/v3/api/title/'+$responseArray['title_id']);
 
     }
     
