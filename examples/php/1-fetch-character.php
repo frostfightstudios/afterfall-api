@@ -10,7 +10,7 @@
     function request($url){
         $headers = [
             'Accept: application/json',
-            'Authorization: Bearer <token>'
+            'Authorization: Bearer ' . $apiToken
         ];
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, $url);
